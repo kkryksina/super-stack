@@ -33,14 +33,3 @@ Stack.prototype.peek = function() {
 }
 
 module.exports = Stack;
-
-var stack = new Stack();
-console.log(stack.isEmpty());
-stack.push('2');
-console.log(stack.peek());
-// console.log(stack.isEmpty());
-// console.log(stack.pop());
-// console.log(stack.isEmpty());
-// console.log(stack.peek());
-// var node1 = new Node('a');
-// console.log(node1.value);
