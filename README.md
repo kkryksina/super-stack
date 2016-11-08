@@ -1,4 +1,5 @@
 # super-stack
+[![Build Status](https://travis-ci.org/kkryksina/super-stack.svg?branch=master)](https://travis-ci.org/kkryksina/super-stack)
 Stack implementation in JavaScript
 
 #API
