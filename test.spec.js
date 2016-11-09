@@ -1,8 +1,8 @@
 'use strict';
 
-var Stack = require('./index.js');
+const Stack = require('./index.js');
 
-var assert = require('assert');
+const assert = require('assert');
 
 describe('super-stack', function() {
     it('should use expected API', function() {
@@ -14,30 +14,30 @@ describe('super-stack', function() {
     }); 
 
     it('New stack should be empty', function() {
-        var stack = new Stack();
+        const stack = new Stack();
         assert(stack.isEmpty(), 'New stack is not empty');
     });
 
     it('Stack with elements should not be empty', function() {
-        var stack = new Stack();
+        const stack = new Stack();
         stack.push('1');
         assert(!stack.isEmpty(), 'Stack with elements is empty');
     });
 
     it('Push method should save new element on the top', function() {
-        var stack = new Stack();
+        const stack = new Stack();
         stack.push('1');
         assert.strictEqual(stack.peek(), '1', 'New element is not on the top');
     });
 
     it('Stack should be empty after push and pop', function() {
-        var stack = new Stack();
+        const stack = new Stack();
         stack.push('1');
         assert.strictEqual(stack.pop(), '1', 'Stack is not empty after push and pop');
     });
 
     it('Peek method should return last pushed element', function() {
-        var stack = new Stack();
+        const stack = new Stack();
         stack.push('1');
         stack.push('2');
         stack.push('3');
@@ -45,13 +45,13 @@ describe('super-stack', function() {
     });
 
     it('Peek method should always return last pushed element', function() {
-        var stack = new Stack();
+        const stack = new Stack();
         stack.push('1');
         assert.strictEqual(stack.peek(), stack.peek(), 'Peek method returns wrong element');
     });
 
     it('Peek method should return new value after pop', function() {
-        var stack = new Stack();
+        const stack = new Stack();
         stack.push('1');
         stack.push('2');
         stack.push('3');
@@ -61,7 +61,7 @@ describe('super-stack', function() {
     });
 
     it('Pop method should return elements in reversed order', function() {
-        var stack = new Stack();
+        const stack = new Stack();
         stack.push('1');
         stack.push('2');
         assert.strictEqual(stack.pop(), '2', 'Pop method returns elements in order');
@@ -69,19 +69,19 @@ describe('super-stack', function() {
     });
 
     it('Pop method should throw error if stack is empty', function() {
-        var stack = new Stack();
+        const stack = new Stack();
         assert.throws(function() {stack.pop()}, 'Stack is empty');
     });
 
     it('Pop method should throw error if all elements were poped', function() {
-        var stack = new Stack();
+        const stack = new Stack();
         stack.push('1');
         stack.pop();
         assert.throws(function() {stack.pop()}, 'Stack is empty');
     });
     
     it('Peek method should throw error if stack is empty', function() {
-        var stack = new Stack();
+        const stack = new Stack();
         assert.throws(function() {stack.peek()}, 'Stack is empty');
     });
 

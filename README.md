@@ -4,9 +4,9 @@ Stack implementation in JavaScript
 
 #API
 ```javascript
-var Stack = require('super-stack');
+const Stack = require('super-stack');
 
-var stack = new Stack();
+const stack = new Stack();
 console.log(stack.isEmpty()); // true 
 stack.push('2'); // 2
 console.log(stack.peek()); // 2

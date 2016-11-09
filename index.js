@@ -1,6 +1,6 @@
 'use strict';
 
-var assert = require('assert');
+const assert = require('assert');
 
 function Node(value) {
     this.value = value;
@@ -15,14 +15,14 @@ Stack.prototype.isEmpty = function() {
 }
 
 Stack.prototype.push = function(value) {
-    var newNode = new Node(value);
+    const newNode = new Node(value);
     newNode.next = this._top;
     this._top = newNode;
 }
 
 Stack.prototype.pop = function() {
     assert(!this.isEmpty(), 'Error: stack is empty');
-    var topValue = this._top.value;
+    const topValue = this._top.value;
     this._top = this._top.next;
     return topValue;
 }
