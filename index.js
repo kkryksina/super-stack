@@ -21,14 +21,14 @@ Stack.prototype.push = function(value) {
 }
 
 Stack.prototype.pop = function() {
-    assert(this._top != null, 'Error: stack is empty');
+    assert(!this.isEmpty(), 'Error: stack is empty');
     var topValue = this._top.value;
     this._top = this._top.next;
     return topValue;
 }
 
 Stack.prototype.peek = function() {
-    assert(this._top != null, 'Error: stack is empty');
+    assert(!this.isEmpty(), 'Error: stack is empty');
     return this._top.value;
 }
 
