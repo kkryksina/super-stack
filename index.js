@@ -14,7 +14,7 @@ class Stack {
     }
 
     isEmpty() {
-        return this._top == null;
+        return this._top === null;
     }
 
     push(value) {
@@ -24,14 +24,16 @@ class Stack {
     }
 
     pop() {
-        assert(!this.isEmpty(), 'Error: stack is empty');
+        assert(!this.isEmpty(), 'stack is empty');
+
         const topValue = this._top.value;
         this._top = this._top.next;
         return topValue;
     }
 
     peek() {
-        assert(!this.isEmpty(), 'Error: stack is empty');
+        assert(!this.isEmpty(), 'stack is empty');
+
         return this._top.value;
     }
 }

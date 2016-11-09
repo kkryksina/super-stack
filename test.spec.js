@@ -82,7 +82,9 @@ describe('super-stack', function() {
     
     it('Peek method should throw error if stack is empty', function() {
         const stack = new Stack();
-        assert.throws(function() {stack.peek()}, 'Stack is empty');
+        assert.throws(function() {
+            stack.peek()
+        }, 'Stack is empty');
     });
 
 }); 
