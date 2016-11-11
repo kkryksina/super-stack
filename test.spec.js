@@ -15,13 +15,13 @@ describe('super-stack', function() {
 
     it('New stack should be empty', function() {
         const stack = new Stack();
-        assert(stack.isEmpty(), 'New stack is not empty');
+        assert.strictEqual(stack.isEmpty(), true, 'New stack is not empty');
     });
 
     it('Stack with elements should not be empty', function() {
         const stack = new Stack();
         stack.push('1');
-        assert(!stack.isEmpty(), 'Stack with elements is empty');
+        assert.strictEqual(!stack.isEmpty(), true, 'Stack with elements is empty');
     });
 
     it('Push method should save new element on the top', function() {
